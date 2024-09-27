@@ -1,8 +1,18 @@
 Instruções
 
+Baixar e instalar o maven
+
+Baixar e instalar o mysql server community e mysql workbench 
+
+criar um banco de dados chamado loja1. Criar as tabelas conforme abaixo, inserir os dados conforme abaixo.
+
+ao clonar o projeto executar o comando abaixo para baixar as dependências do maven
+
 mvn -N wrapper:wrapper
 
 ao clonar o projeto, executar mvn wrapper:wrapper para baixar as dependencias e organizar o ambiente.
+
+exercutar o comando abaixo para subir o projeto
 
 ./mvnw spring-boot:run
 
