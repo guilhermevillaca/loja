@@ -26,7 +26,7 @@ CREATE TABLE `categoria` (
  PRIMARY KEY (id),
  KEY categoria_pai_id (categoria_pai_id),
  CONSTRAINT categoria_ibfk_1 FOREIGN KEY (categoria_pai_id) REFERENCES categoria (id) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+);
 
 
 
@@ -79,3 +79,21 @@ VALUES
     ('Smart TV Philips 43PUG6513', 'TV 4K da Philips', 2500, 15, 9),
     ('Conjunto de lingerie preta', 'Conjunto de lingerie feminina', 40, 60, 10),
     ('Cueca boxer masculina', 'Cueca boxer confortável', 25, 100, 10);
+
+
+
+
+create table pessoa(
+	id int primary key auto_increment,
+    nome varchar(255) not null
+);
+
+
+create table usuario(
+	id int primary key auto_increment,
+    login varchar(50) not null,
+    senha varchar(100) not null,
+    pessoa_id int not null,
+    constraint fk_pessoa 
+		foreign key (pessoa_id) references pessoa(id)
+);
