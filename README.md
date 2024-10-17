@@ -99,7 +99,7 @@ create table usuario(
 );
 
 
-INSERT INTO Pessoa (nome) VALUES 
+INSERT INTO pessoa (nome) VALUES 
 ('João Silva'),
 ('Maria Oliveira'),
 ('Carlos Souza'),
@@ -112,7 +112,7 @@ INSERT INTO Pessoa (nome) VALUES
 ('Paula Moreira');
 
 
-INSERT INTO Usuario (login, senha, pessoa_id) VALUES 
+INSERT INTO usuario (login, senha, pessoa_id) VALUES 
 ('joaosilva', 'senha123', 1),
 ('mariaoliveira', 'senha123', 2),
 ('carlossouza', 'senha123', 3),
