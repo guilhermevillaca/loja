@@ -97,3 +97,30 @@ create table usuario(
     constraint fk_pessoa 
 		foreign key (pessoa_id) references pessoa(id)
 );
+
+
+INSERT INTO Pessoa (nome) VALUES 
+('João Silva'),
+('Maria Oliveira'),
+('Carlos Souza'),
+('Ana Costa'),
+('Pedro Fernandes'),
+('Lucia Mendes'),
+('Marcos Lima'),
+('Fernanda Ribeiro'),
+('José Almeida'),
+('Paula Moreira');
+
+
+INSERT INTO Usuario (login, senha, pessoa_id) VALUES 
+('joaosilva', 'senha123', 1),
+('mariaoliveira', 'senha123', 2),
+('carlossouza', 'senha123', 3),
+('anacosta', 'senha123', 4),
+('pedrofernandes', 'senha123', 5),
+('luciamendes', 'senha123', 6),
+('marcoslima', 'senha123', 7),
+('fernandaribeiro', 'senha123', 8),
+('josealmeida', 'senha123', 9),
+('paulamoreira', 'senha123', 10);
+
