@@ -10,6 +10,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
@@ -17,6 +21,10 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name = "pessoa")
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class Pessoa {
 
     @Id
@@ -27,20 +35,8 @@ public class Pessoa {
     @Column(name = "nome")
     private String nome;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public Pessoa(String nome){
         this.nome = nome;
     }
-
+    
 }

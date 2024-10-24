@@ -13,6 +13,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
@@ -20,6 +24,10 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name = "usuario")
+@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class Usuario {
 
     @Id
@@ -35,37 +43,11 @@ public class Usuario {
 
     @JoinColumn(referencedColumnName = "id", name = "pessoa_id")
     @ManyToOne
-    private Pessoa pessoa;
+    private Pessoa pessoa;    
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-    public void setLogin(String login) {
+    public Usuario(String login, String senha, Pessoa pessoa){
         this.login = login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public Pessoa getPessoa() {
-        return pessoa;
-    }
-
-    public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;
     }
 

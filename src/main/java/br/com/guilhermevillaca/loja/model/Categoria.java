@@ -8,6 +8,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
@@ -15,6 +20,11 @@ import jakarta.persistence.Table;
  */
 @Entity
 @Table(name = "Categoria")
+@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Categoria {
 
     @Id
@@ -32,35 +42,9 @@ public class Categoria {
     @ManyToOne
     private Categoria categoria;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public Categoria(String nome, String descricao, Categoria categoria){
         this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
         this.descricao = descricao;
-    }
-
-    public Categoria getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
